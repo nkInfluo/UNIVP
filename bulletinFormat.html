@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulletin de Notes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+h4{
+  text-align: center;
+  }
+    .container {
+      width: 95%;
+      margin: auto;
+      border: 1px solid #000;
+      padding: 10px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #000;
+      padding-bottom: 10px;
+    }
+
+ .header-right {
+      width: 30%;
+      text-align: center;
+    }
+       .header-left{
+      width: 70%;
+      text-align: center;
+      display: flex;
+    }
+
+    .header-center {
+      width: 0%;
+      text-align: center;
+    }
+
+    .header img {
+      /*max-height: 100px;*/
+    }
+
+    .header-center h1 {
+      margin: 5px 0;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    .header-center p {
+      font-size: 12px;
+    }
+
+    .student-info {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .student-info div {
+      width: 30%;
+      font-size: 12px;
+    }
+
+    .notes-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      margin-top: 20px;
+    }
+
+    .notes-table th, .notes-table td {
+      border: 1px solid #000;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .notes-table th {
+      background-color: #f0f0f0;
+      font-weight: bold;
+    }
+
+    .notes-table .total-row {
+      font-weight: bold;
+      text-align: center;
+      background-color: #f7f7f7;
+    }
+
+    .footer-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    .footer-table th, .footer-table td {
+      border: 1px solid black;
+      text-align: left;
+      padding: 5px;
+      vertical-align: top;
+    }
+    .footer-table th {
+      text-align: center;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .centered {
+      text-align: center;
+    }
+    .signature {
+      margin-top: 20px;
+      text-align: center;
+    }
+                     button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 600px;
+            margin-top: 20px;
+        }
+
+  button:hover {
+            background-color: #0056b3;
+        }
+        
+        
+    hr.bold-line {
+        border: 1px solid black;
+        opacity: 1;
+    }
+
+    @media print {
+        hr.bold-line {
+            border: 1px solid black;
+            opacity: 1;
+        }
+    }
+
+  </style>
+</head>
+
+<body>
+    
+    
+     <div class="container" id="page">
+    <!-- Header -->
+        <p style="margin-left:20px; font-size: 14px;margin-bottom:0px;text-transform:uppercase">
+            Ministère de l'Enseignement supérieur <br> et de la recherche scientifique <br>
+            <span style="margin-left:30px">
+            -----------------------------------
+            </span>
+        </p>
+    <div class="header">
+        <div class="header-left">
+        <div style="margin-left:10px;">
+            <strong style="font-size:18px;margin-left:20px">
+                
+            </strong> <br>  
+            <img src="" alt="Logo Ministère" style="width:130px;height:120px;margin-bottom:25px">
+        </div>
+        <div>
+        <p style="font-size: 12px;">
+                                    
+        </p>
+        <div style="margin-left:160px;font-size:16px;font-weight:bold">
+            <p style="margin-bottom:10px;">
+                ANNEE ACADÉMIQUE 2024-2025
+            </p>
+            <p style="font-weight:bold">
+                BULLETIN DE NOTES DU
+                SEMESTRE</p>
+
+        </div>
+    </div>
+            
+        </div>
+        <div class="header-center">
+            <!--<h1>Bulletin de Notes</h1>-->
+         </div>
+        <div class="header-right" style="margin-top:-100px;margin-bottom:10px">
+            <p>Republique de cote d'ivoire</p>
+            <img src="" alt="Logo Établissement" style="height:100px;margin-bottom:10px">
+            <p style="margin-top: -12px">Union-Discipline-Travail</p>
+        </div>
+    </div>
+    <p style="margin-top: -55px;"> 
+        <p style="font-size:25px;margin-bottom:-20px">
+            <strong>Classe :</strong> 
+            <strong style="margin-left:45px">Effectif :</strong>
+            
+        </p>
+    </p>
+   
+    <!-- Student Information -->
+    
+     <div style="margin-top:30px">
+        <p style="font-size: 22px;">
+            <strong></strong>
+        </p>
+    </div>
+    <div class="student-info" style="margin-top:-35px">
+        <div style="margin-top:20px;">
+           
+            <p style="font-size: 15px;"><strong>Matricule :</strong> </p>
+            <p style="font-size: 15px;">
+                <strong>Sexe :</strong>  
+                
+            </p>
+        </div>
+        <div style="margin-top:20px;">
+            <p style="font-size: 15px;margin-left:-40px"><strong>Né(e) le :</strong> </p>
+            <p style="font-size: 15px;margin-left:-40px"><strong>Lieu de Naissance :</strong> <span style="font-size: 12px;"></span></p>
+            <p style="font-size: 15px;margin-left:-40px"><strong>Nationalité :</strong> </p>
+        </div>
+        <div style="margin-top:20px;margin-rigth:-50px">
+            <p style="font-size: 15px;"><strong>Redoublant :</strong> </p>
+           
+             <p style="font-size: 15px;"><strong>Affecté :</strong> </p>
+        </div>
+        <div style="margin-top:20px;">
+              
+            <img src="" alt="Photo" style="width:100px;height: 100px;">
+            
+        </div>
+    </div>
+    
+    
+    
+
+    <!-- Table des matières -->
+    <table class="notes-table">
+      <thead>
+        <tr>
+          <th>Discipline</th>
+          <th>Moy./20</th>
+          <th>Coeff.</th>
+          <th>Moy. Coeff.</th>
+          <th>Rang</th>
+          <th>Nom du Professeur</th>
+          <th>Appréciation</th>
+          <th>Signature</th>
+        </tr>
+      </thead>
+      <tbody>
+          
+          
+        
+    
+    
+
+    <tr>
+        <td style="text-align: left;font-size:16px"></td>
+        <td style="font-size:17px"></td>
+        <td style="font-size:17px"></td>
+        <td style="font-size:17px"></td>
+        <td>
+            
+        </td>
+        <td style="text-align: left;">
+            
+        </td>
+        
+        <td style="text-align: left;">
+            
+        </td>
+        <td></td>
+    </tr>
+        
+
+
+    <tr class="total-row">
+    <td colspan="2" style="font-size:16px">Totaux</td>
+    <td style="font-size:17px">
+       
+    </td>
+    <td style="font-size:17px">
+        
+    </td>
+    <td colspan="6"></td>
+</tr>
+
+        
+        
+        
+      </tbody>
+    </table>
+
+<table class="footer-table">
+    <tr style="font-size:14px;">
+        <td>
+            <p><strong>Assiduités</strong></p>
+            <p style="font-size:16px">
+                Heures d'absence justifiées : 
+            </p>
+            <p style="font-size:14px">
+                Heures d'absence non justifiées : 
+            </p>
+        </td>
+        <td>
+        <p style="font-size:18px;text-align:center">Moyenne : 
+       
+        <b>
+            
+            
+            
+        </b> / 20
+       
+
+        </p>
+        <p style="font-size:18px;text-align:center">Rang : 
+       
+        / </p>
+      </td>
+      <td>
+        <p style="text-align:center;font-size:15px">
+            <strong>Résultat de la classe</strong>
+        </p>
+        
+        <p style="font-size:14px">
+                Plus forte moyenne :  / 20
+        </p>
+        <p style="font-size:14px">
+            Plus faible moyenne :  / 20
+        </p>
+        <p style="font-size:14px">
+            Moyenne de la classe :  / 20
+        </p>
+        
+       
+      </td>
+    </tr>
+
+    <tr>
+
+        <td style="padding-top:-10px">
+            <h4 style="margin-bottom:-2px">
+                <u>Distinctions</u>
+                </h4>
+            <hr>
+            <p style="font-size:14px;margin-bottom:-15px"><input type="checkbox"> Tableau d'honneur</p>
+            <p style="font-size:14px;margin-bottom:-15px"><input type="checkbox"> Tableau d'honneur + Encouragement</p>
+            <p style="font-size:14px"><input type="checkbox"> Tableau d'honneur + Félicitations</p>
+            <h4><u><strong>Sanctions</strong></u></h4>
+            <p style="font-size:14px;margin-bottom:-15px"><input type="checkbox"> Avertissement pour travail insuffisant</p>
+            <p style="font-size:14px;margin-bottom:-15px"><input type="checkbox"> Blâme pour travail insuffisant</p>
+            <p style="font-size:14px;margin-bottom:-15px"><input type="checkbox"> Avertissement pour mauvaise conduite</p>
+            <p style="font-size:14px;margin-bottom:-3px"><input type="checkbox"> Blâme pour mauvaise conduite</p>
+        </td>
+        <td style="padding-top:-10px" classe='centered'>
+            <h4 style="margin-bottom:-2px">
+                <u>Appréciations du conseil de classe</u></h4>
+            <hr>
+          <div  style="tmargin-top: 90px;text-align: center;">
+            <p>Passable</p>
+          </div>
+            <div style="margin-top: 90px; text-align: center;font-size:12px">
+            <p><u>Le Professeur Titulaire </u></p>
+            <p>
+            
+                <!--M. TOURE KATINAN BENOIT-->
+            </p>
+            </div>
+        </td>
+      
+        <td style="padding-top:-10px" classe='centered'>
+            <h4 style="margin-bottom:-2px">
+                <u>Visa du Directeur des Enseignements</u></h4>
+            <hr>
+            <div style="margin-top: 80px; text-align: center;">
+                <!--<p>Le Directeur des Enseignements</p>-->
+                <br>
+                <p>Dr Abdramane DIALLO</p>
+                <p style="text-align: center;"> 
+                <p id="date-etablie"></p>
+                <!--Etablit le 03/01/2025 -->
+                </p>
+            </div>
+        </td>
+      
+    </tr>
+ 
+    <tr class="total-row">
+      <td colspan="10"></td>
+    </tr>
+        
+    <tr class="total-row">
+        <td colspan="10">
+            <p>
+                Ets Henri Poincaré  SARL au capital social de 10.000.000 FCFA , N CR : CI-ABJ-2018-B-03120 N CC :180563E CNPS : 322100 Siège social : ABIDJAN 28 BP 1087 ABIDJAN28 / Tel : 27 22 41 67 94 Fax :27 22 42 28 15 Email : poincareabidjan@yahoo.fr 
+                        Bouake 01 BP 1284 Bouaké 01 / Tel :27 31 63 51 21 Email : poincarebouake@yahoo.fr
+            Site : www.etspoincare.com
+          </p>
+      </td>
+    </tr>
+  </table>
+    </div>
+    </div>
+  </div>
+
+  </div>
+   <div style="flex: 1; min-width: 120px; display: flex; align-items: flex-end;">
+    <button class="btn btn-danger btn-lg" onclick="printDiv('page')"> Imprimer</button>
+</div>
+    <script>
+        function generatePDF(){ 
+            var param =document.getElementById('paramRecu').value;
+            console.log("cliquer");
+            const element = document.getElementById('page');
+            var opt = { 
+                bottom: 0,
+                image: { type: 'png' , quality: 0.89},
+                html2canvas: { dpi: 75, scale: 2, letterRendering: true},
+                jsPDF: { unit: 'cm', format: 'a5', orentation: '1'}
+        };
+        html2pdf().set(opt).from(element).save(param);
+        }
+        function printDiv(divId){ 
+            var printContents = document.getElementById(divId).innerHTML;
+            var originalContents = document.body.innerHTML;
+            document.body.innerHTML = printContents;
+            window.print();
+            document.body.innerHTML=originalContents;
+        }
+        function getFormattedDate() {
+            const today = new Date();
+            const day = String(today.getDate()).padStart(2, '0'); // Ajoute un zéro devant si nécessaire
+            const month = String(today.getMonth() + 1).padStart(2, '0'); // Les mois commencent à 0
+            const year = today.getFullYear();
+        
+            return `Établi le ${day}/${month}/${year}`;
+        }
+        
+        // Affichage dans la console
+        console.log(getFormattedDate());
+        
+        // Exemple d'affichage dans une page HTML
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("date-etablie").textContent = getFormattedDate();
+        });
+    </script>
+</body>
+</html>
